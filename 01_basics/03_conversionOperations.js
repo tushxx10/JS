@@ -1,0 +1,50 @@
+//for number
+let score = 33;
+
+console.log("1a" , typeof score);
+console.log("1b" , typeof(score));
+
+let valueInNumber = Number(score);
+console.log("1c" , typeof score);
+
+//for number in string
+let score1 = "33";
+console.log("2a" , typeof score1);
+
+let valueInNumber1 = Number(score1);
+console.log("2b" , typeof valueInNumber1);
+console.log(valueInNumber1);
+
+//for number+alphabets in stringtype
+let score2 = "33abc";
+console.log("3a" , typeof score2);
+
+let valueInNumber2 = Number(score2);
+console.log("3b" , typeof valueInNumber2);
+console.log(valueInNumber2);  //Actual value is NaN(Not a Number)
+
+//for null
+let score3 = null;
+console.log("4a" , typeof score3);
+
+let valueInNumber3 = Number(score3);
+console.log("4b" , typeof valueInNumber3);
+console.log(valueInNumber3);  // 0
+
+//for undefined
+let score4 = undefined;
+console.log("5a" , typeof score4);
+
+let valueInNumber4 = Number(score4);
+console.log("5b" , typeof valueInNumber4);
+console.log(valueInNumber4);   //NaN
+
+//for boolean
+let isLoggedIn=1;
+
+let booleanisLoggedIn=Boolean(isLoggedIn)
+console.log(booleanisLoggedIn)
+
+//1 => true ; 0 => false
+// "" => false;
+// "Tushar " => true;
