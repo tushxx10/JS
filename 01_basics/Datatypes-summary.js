@@ -36,8 +36,37 @@ const heroes=["SRK" , "Salman KHan", "Akshay Kumar"];
 // representation of Functions
 
 const myFunction = function(){
-    console.log("Tushar");
+    // console.log("Tushar");
 }
 
+//  **********************************************************
 
+// Stack(Primitive) , Heap(Non-Primitive)
+
+let myYoutubeName = "TusharVlogs"   //since primitive datatype is used isliye original value change nhi hui
+ 
+let anotherName = myYoutubeName;
+
+// console.log(myYoutubeName);
+// console.log(anotherName);
+
+anotherName="West Delhi Gang";
+
+// console.log(myYoutubeName);
+// console.log(anotherName);
+
+
+let userOne = {
+    email:"abc@google.com",
+    upi:"123@1",
+}
+console.log(userOne.email);
+
+let userTwo=userOne;
+console.log(userTwo.email);
+
+userTwo.email="tus@12";
+
+console.log(userTwo.email);
+console.log(userOne.email);  //kyuki yeh nonprimitive datatype h isliye original value bhi change hui h
 
