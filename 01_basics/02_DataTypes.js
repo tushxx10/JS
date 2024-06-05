@@ -12,6 +12,7 @@ let age=21
 let LoggedIn=false
 let state;
 
+console.log(typeof age);
 // Number => 2 to power 53
 //bigint  (for very big nos)
 //string=> can be used in both single and double inverted commaas
