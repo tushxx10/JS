@@ -62,15 +62,51 @@ const users = [
 ]
 // console.log(users[2].id);
 
-console.log(TinderUser);
+//console.log(TinderUser);
 
 //Agar saari keys object ki access krni h to
-console.log(Object.keys(TinderUser));
+//console.log(Object.keys(TinderUser));
 //Agar saari values object ki access krni h to
-console.log(Object.values(TinderUser));
+//console.log(Object.values(TinderUser));
 
 //Har ek key value ko ek array me convert kr skte h
-console.log(Object.entries(TinderUser));
+//console.log(Object.entries(TinderUser));
 
 //check krne ke liye ki TinderUser(Object) me yeh value present h ya nhi
-console.log(TinderUser.hasOwnProperty('isLoggedIn'));  //output is TRUE kyuki present h
+//console.log(TinderUser.hasOwnProperty('isLoggedIn'));  //output is TRUE kyuki present h
+
+
+//*****************DeStructuring of Objects****************//
+
+
+const Course = {
+    courseName: "Js in Hindi",
+    price: "990",
+    CourseInstructor: "Hitesh"
+}
+//access keys in object
+// Course.price
+
+//Another way of accessing it
+
+const {CourseInstructor: Instructor } = Course
+console.log(Instructor);
+
+
+
+//*******************API's Concept**********************/
+//JSON (JSON ki value or keys dono string hoti h)
+
+// {
+//      "name": "Tushar",
+//      "coursename": "Js in hindi",
+//      "price": "990"
+// }
+
+//API's in array format
+
+[
+    {},
+    {},
+    {}
+]
