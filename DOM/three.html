@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating DOM Element</title>
+</head>
+<body style = "background-color: black ; color: white;">
+    
+</body>
+<script>
+    //Creating div element in Script tag
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'Main'
+    div.id = Math.round(Math.random()*10 + 1)
+    // div.setAttribute('kya change krna h'  ,  'kya value hogi jisse change krna h')
+    div.setAttribute('title' , 'generated title') 
+    div.style.backgroundColor = 'green'
+    div.style.padding = '12px 12px'
+
+    //Way of adding text in div tag
+    //div.innerText = 'TUSHAR'
+
+    //better way adding text in div tag
+    const addText = document.createTextNode('TUSHAR')
+    div.appendChild(addText);
+
+    document.body.appendChild(div);
+
+    </script>
+
+</html>
