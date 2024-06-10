@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li><img width="200px" id="cats" src="https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&w=400" alt="photoshop"></li>
+        <li><img width="200px" id="Taj Mahal" src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+        <li><img width="200px" id="mountains" src="https://images.pexels.com/photos/570026/pexels-photo-570026.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+        <li><img width="200px" id="god" src="https://images.pexels.com/photos/2462023/pexels-photo-2462023.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+        <li><img width="200px" id="holi" src="https://images.pexels.com/photos/1211968/pexels-photo-1211968.jpeg?auto=compress&cs=tinysrgb&w=400" alt=""></li>
+        <li><a style="color: aliceblue;" ;href="https://google.com" id="google">Google</a></li>
+      </ul>
+    </div>
+</body>
+<script>
+//Approaches for events
+// below code not good coz onclick not provide much information and features
+    // document.getElementById('cats').onclick = function(){
+    //     alert('Cats clicked')
+    // }
+
+// 4th event [attachEvent()]
+// 5th event jQuery - on  
+
+
+//3rd and best approach  
+//syntax   [false value is default]
+//document.getElementById('cats').addEventListener('click' , function(){} , flase)
+
+    //  document.getElementById('cats').addEventListener('click' , function(e){
+    //   alert('cats clicked using addEventListener') 
+    //   console.log(e)
+    //  } , false)
+
+     //type, timestamp, defaultPrevented, target , toElement, srcElement, currentTarget, clientX,clientY,screenX,screenY,altkey,ctrlkey,shiftkey,keyCode
+
+     //Event Propagation(true/false)
+     //2types Bubbling(niche se upar) and Capturing(upar se niche)
+
+//Bubbling [FALSE]     
+// document.getElementById('images').addEventListener('click' , function(e){
+     
+//       console.log('clicked on URL')
+//      } , false)
+
+// document.getElementById('cats').addEventListener('click' , function(e){
+      
+//       console.log('Cats clicked')
+//       e.stopPropagation()
+
+//      } , false)
+
+//Capturing[TRUE]     
+// document.getElementById('images').addEventListener('click' , function(e){
+     
+//      console.log('clicked on URL')
+//     } , true)
+    
+// document.getElementById('cats').addEventListener('click' , function(e){
+     
+//      console.log('Cats clicked')
+//     } , true)
+   
+
+   //preventDefault
+//    document.getElementById('google').addEventListener('click' , function(e){
+//       e.preventDefault()
+//       console.log('Google clicked')
+//       e.stopPropagation() //taaki clicked on url na dikhe
+
+//    }, false )
+
+
+
+//Activities
+document.querySelector('#images').addEventListener('click' , function(e){
+// console.log(e)
+// console.log(e.target)  //gives while img tag and target is id
+console.log(e.target.parentNode)  //it gives while li jo iska parent h
+console.log(e.target.tagName) 
+if(e.target.tagName === 'IMG'){
+console.log(e.target.id)
+//to remove
+let removeIt = e.target.parentNode
+//1st approach
+removeIt.remove()
+}
+
+//2nd approach
+// removeIt.parentNode.removeChild(removeIt)  //removeIt ka parent node = ul the ul ka remove child kro jo removeIt ka h
+
+
+
+
+} , false)
+
+</script>
+</html>
