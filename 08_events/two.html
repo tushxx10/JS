@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeOut</title>
+</head>
+<body>
+    <h1>Chai or Code</h1>
+     <button id="stop">Stop</button>
+</body>
+<script>
+    //setTimeout => ek prticular time intervale ke baad ek he baar kaam krta h
+
+    //methods of setTimeout()
+    //1st method
+    // setTimeout( function(){
+    //     console.log('Tushar')
+    // } , 2000)
+
+    //2nd method
+    const sayTushar = function(){
+         console.log('Tushar')
+     }
+    setTimeout(sayTushar , 2000)
+    const changeHeading = function(){
+             document.querySelector('h1').innerHTML = 'Best Js Series'
+    }
+   const changeMe = setTimeout(changeHeading,2000)
+
+   //clearTimeout() = to 
+// clearTimeout(changeMe)
+  document.querySelector('#stop').addEventListener('click' , function(){
+    clearTimeout(changeMe)
+    console.log('STOPPED')
+  })
+   
+</script>
+</html>
